@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(182, 167, 167);
+    margin: 5% 5% 5% 5%; /* responsavel pela margem do body */
+}
+
+
+main{
+    margin: 5% 5% 5% 5%; /* responsavel pela margem do main */
+}
+
+.espacamentoSupInf{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.espacamentoLateral{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.flex{
+    display: flex; /* responsavel por organizar os elementos dentro da classe flex */
+    gap: 0%; /* responsavel pelo espaçamento entre os elementos dentro da classe flex */
+}
+.flexcabecalho{
+    width: 100%; /* responsavel pela largura da classe flexcabecalho */
+    height: 90%; /* responsavel pela altura da classe flexcabecalho */
+    display: flex;
+    margin: 3% 1% 1% 10%; /* responsavel pelo espaçamento entre os elementos dentro da classe flex */
+}
+.corTexto{
+    color: rgb(192, 223, 199); /* responsavel pela cor do texto */
+}
+.corTexto2{
+    color: rgba(218, 218, 91, 0.61); /* responsavel pela cor do texto */
+}
+.tamanhoTexto{
+    font-size: 2rem; /* responsavel pelo tamanho do texto */
+}
+.tamanhoTexto2{
+    font-size: 1.3rem; /* responsavel pelo tamanho do texto */
+}
+.espacamento_cabecalho{
+    margin: 5% 5% 5% 38%; /* responsavel pela margem do ulimo densevolvedor */
+}
+.espacamento_apresentacao{
+    margin: 5% 5% 5% 30%; /* responsavel pela margem do elemento */
+}
+.espacamento_estrutura{
+    margin: 3% 5% 2% 50%; /* responsavel pela margem do elemento */
+}
+.espacamento_estrutura_imagem{
+    margin: 0% 3% 7% 30%; /* responsavel pela margem do elemento */
+}   
+.espacamento_codigo{
+    margin: 0% 2% 2% 51%; /* responsavel pela margem do elemento */
+}
+.espacamento_habilidaes{
+    margin: 5% 2% 2% 50%; /* responsavel pela margem do elemento */
+}
+.espacamento_habilidades_imagem{
+    margin: 5% 3% 0% 29%; /* responsavel pela margem do elemento */
+    ;
+}
+.espacamento_habilidades_texto{
+    margin: 0% 5% 0% 28%; /* responsavel pela margem do elemento */
+}
+
+.espacamentoProjetos{
+    margin: 10% 5% 0% 50%; /* responsavel pela margem do elemento */
+}
+.espacamentoProjetosTexto{
+    margin: 2% 5% 5% 45%; /* responsavel pela margem do elemento */
+}
+.espacamentoFooter{
+    margin: 5% 5% 0% 41%; /* responsavel pela margem do elemento */
+}
+.corTextoFooter{
+    color: rgb(190, 92, 26); /* responsavel pela cor do texto */
+}
+.bloco{
+    width: 30%; /* responsavel pela largura da classe bloco */
+    height: 70%;
+    background-color: rgb(34, 30, 30); /* responsavel pela cor*/
+    border-radius: 0%; /* responsavel pelo arredondamento dos cantos da classe bloco */
+}
+.icone-menu {
+    width: 50%;  /* Largura que você desejar */
+    height: auto; /* Mantém a proporção da imagem sem achatar */
+    cursor: pointer;
+    transition: transform 0.10s; /* Efeito opcional de suavidade */
+}
+
+/* Dica extra: aumentar um pouquinho quando passar o mouse */
+.icone-menu:hover {
+    transform: scale(1.1);
+}
+
+html{
+    scroll-behavior: smooth; /* Responsavel por deixar a rolagem suave */
+}
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Faz os itens pularem de linha se não couberem */
+  justify-content: space-around;
+  align-items: center;
+}
+
