@@ -1,166 +1,130 @@
-:root{
-    font-family: 'Arial', sans-serif; /* responsavel pela fonte do texto */
-    --cor-textoTitulo: rgba(212, 230, 52, 0.87); /* responsavel pela cor do body */
-    --cor-texto: rgb(192, 223, 199); /* responsavel pela cor do texto */
-    --cor-block1: rgb(34, 30, 30); /* responsavel pela cor do bloco */
-    --cor-blockTitulo: rgba(124, 129, 113, 0.377); /* responsavel pela cor do titulo do bloco */
-    --cor-footer: rgb(190, 92, 26); /* responsavel pela cor do footer */
+:root {
+    font-family: 'Arial', sans-serif;
+    --cor-textoTitulo: rgba(212, 230, 52, 0.87);
+    --cor-texto: rgb(192, 223, 199);
+    --cor-block1: rgb(34, 30, 30);
+    --cor-blockTitulo: rgba(124, 129, 113, 0.377);
+    --cor-footer: rgb(190, 92, 26);
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    margin: 5% 5% 5% 5%; /* responsavel pela margem do body */
+body {
+    padding: 20px; /* Usar padding em vez de margin evita bugs de rolagem */
+    min-height: 100vh;
 }
 
-main{
-    margin: 5% 5% 5% 5%; /* responsavel pela margem do main */
+html {
+    scroll-behavior: smooth;
 }
 
-img{
-    max-width: 100%; /* responsavel por deixar a imagem responsiva */
-    height: auto; /* responsavel por manter a proporção da imagem */
-}
-.container {
+/* --- ESTILOS DE COR E TEXTO --- */
+.corTexto { color: var(--cor-texto); }
+.corTextoTitulo { color: var(--cor-textoTitulo); }
+.tamanhoTexto { font-size: 2rem; }
+.tamanhoTexto2 { font-size: 1.3rem; }
+
+/* --- CONTAINERS GENERALIZADOS (O Segredo da Centralização) --- */
+.container, section {
     display: flex;
-    flex-wrap: wrap; /* Faz os itens pularem de linha se não couberem */;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo na horizontal */
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Classes Flex genéricas para alinhar blocos internos */
+.flex, .flexEstrutura {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Se não couber de lado, quebra para baixo sozinho */
+    width: 100%;
+    max-width: 1000px; /* Limita a largura em monitores muito grandes */
+    margin: 20px auto;
 }
-.bloco{
-    flex: 0 1 400px; /* responsavel por deixar o elemento responsivo */
-    min-width: 250px; /* responsavel pela largura da classe bloco */
-    padding: 10px;/* responsavel pelo espaçamento interno da classe bloco */
-    background-color: var(--cor-block1); /* responsavel pela cor*/
-    border-radius: 0%; /* responsavel pelo arredondamento dos cantos da classe bloco */
+
+/* --- COMPONENTES --- */
+.bloco {
+    flex: 1 1 300px; /* Cresce e encolhe dinamicamente, base de 300px */
+    max-width: 500px;
+    padding: 20px;
+    background-color: var(--cor-block1);
+    border-radius: 8px; /* Um leve arredondamento deixa mais moderno, mude para 0% se preferir */
 }
-.blocoTitulo{
+
+.blocoTitulo {
     text-align: center;
-    min-width: 250px;
-    background-color: var(--cor-blockTitulo); /* responsavel pela cor do blocoTitulo */
-    color: var(--cor-textoTitulo); /* responsavel pela cor do texto do blocoTitulo */
-    padding: 10px; /* responsavel pelo espaçamento interno da classe blocoTitulo */
-    border-radius: 0%; /* responsavel pelo arredondamento dos cantos da classe blocoTitulo */
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--cor-blockTitulo);
+    color: var(--cor-textoTitulo);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* Cabeçalho / Menu */
+.containerCabecado {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.espacamento_cabecalho_imagem {
+    width: 120px;
+    height: auto;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .icone-menu {
     cursor: pointer;
-    transition: transform 0.10s; /* Efeito opcional de suavidade */
+    transition: transform 0.1s;
 }
 
 .icone-menu:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
-.centralizar{
-    text-align: center; /* responsavel por centralizar o texto dentro do elemento */
-        margin-left: 45%; /* responsavel por centralizar o elemento */
-        margin-bottom: 5%;
-        margin-top: 15%;
 
-}
-.espacamentoSupInf{
-    margin-top: 5%;
-    margin-bottom: 0%;
-}
-.espacamentoLateral{
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.flex{
-    display: flex; /* responsavel por organizar os elementos dentro da classe flex */
-    gap: 2%; /* responsavel pelo espaçamento entre os elementos dentro da classe flex */
-    justify-content: center; /* responsavel por centralizar os elementos dentro da classe flex */
-    align-items: center; /* responsavel por alinhar os elementos dentro da classe flex */
-    flex-wrap: wrap; /* responsavel por quebrar a linha quando os elementos não couberem em uma linha */
-}
-.corTexto{
-    color: var(--cor-texto); /* responsavel pela cor do texto */
-}
-.corTextoTitulo{
-    color: var(--cor-textoTitulo); /* responsavel pela cor do texto */
-}
-.tamanhoTexto{
-    font-size: 2rem; /* responsavel pelo tamanho do texto */
-}
-.tamanhoTexto2{
-    font-size: 1.3rem; /* responsavel pelo tamanho do texto */
-}
-/*cabeçalho*/
-.espacamento_cabecalho_imagem{
-    width: 150px; /* responsavel pela largura da imagem do cabeçalho */
-    height: 60px; /* responsavel pela altura da imagem do cabeçalho */
-}
-.espacamento_cabecalho{
-    margin-left: 39%;
-    gap: 5px;
-}
-.containerCabecado {
-    margin-left: 28%;
-    gap: 3%;
+/* Ajuste específico para os links das redes sociais no Footer */
+#contato {
     display: flex;
-    flex-wrap: wrap; /* Faz os itens pularem de linha se não couberem */;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
 }
-/*apresentação*/
-.espacamento_apresentacao{
-    margin-left: 27%; /* responsavel pela margem do elemento */
-    
-}
-.espacamento_apresentacao, .bloco{
-    width: 90%; /* responsavel pela largura do elemento */
-}
-.flexEstrutura{
+
+#contato a {
     display: flex;
-    gap: 2%; /* responsavel pelo espaçamento entre os elementos dentro da classe flexEstrutura */
-    justify-content: center; /* responsavel por centralizar os elementos dentro da classe flexEstrutura */
-    align-items: center; /* responsavel por alinhar os elementos dentro da classe flexEstrutura */
-    flex-wrap: wrap; /* responsavel por quebrar a linha quando os elementos não couberem em uma linha */
-}
-.espacamento_estrutura{
-    text-align: center;/* responsavel por centralizar o texto dentro do elemento */
-    width: 100%; /* responsavel pela largura do elemento */
-
-}
-.espacamento_estrutura_imagem{
-    margin-right: -45%; /* responsavel pela margem do elemento */
-    text-align: left;
-
-}   
-.espacamento_codigo{
-    margin-right: -45%; /* responsavel pela margem do elemento */
-}
-/*HABILIDADES*/
-.espacamento_habilidades_imagem{
-    margin: 1% 5% 0% 42%; /* responsavel pela margem do elemento */
-}
-.espacamento_habilidades_texto{
-    margin: 0% 5% 0% 44%; /* responsavel pela margem do elemento */
-}
-/*PROJETOS*/
-.espacamentoProjetos{
-    margin: 10% 5% 0% 45%; /* responsavel pela margem do elemento */
-}
-.espacamentoProjetosTexto{
-    margin: 2% 5% 5% 45%; /* responsavel pela margem do elemento */
-}
-/*CONTATO*/
-.espacamentoFooter{
-    margin: 5% 5% 0% 41%; /* responsavel pela margem do elemento */
-}
-.corTextoFooter{
-    color: var(--cor-footer); /* responsavel pela cor do texto */
-}
-html{
-    scroll-behavior: smooth; /* Responsavel por deixar a rolagem suave */
+    justify-content: center;
+    width: 50px; /* Define um tamanho fixo para os ícones sociais ficarem organizados */
 }
 
-@media (max-width: 468px) {
-    .flex {
-        flex-direction: column; /* Empilha os itens verticalmente em telas pequenas */
-        align-items: center; /* Centraliza os itens */
+/* --- MEDIA QUERIES (Adaptação para Celulares) --- */
+@media (max-width: 768px) {
+    /* Em celulares, o que era lado a lado vira uma coluna perfeita */
+    .flex, .flexEstrutura {
+        flex-direction: column;
+        text-align: center;
     }
+
+    .tamanhoTexto { font-size: 1.6rem; }
+    .tamanhoTexto2 { font-size: 1.1rem; }
 }
