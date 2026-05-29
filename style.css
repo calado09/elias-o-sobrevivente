@@ -1,130 +1,113 @@
-:root {
-    font-family: 'Arial', sans-serif;
-    --cor-textoTitulo: rgba(212, 230, 52, 0.87);
-    --cor-texto: rgb(192, 223, 199);
-    --cor-block1: rgb(34, 30, 30);
-    --cor-blockTitulo: rgba(124, 129, 113, 0.377);
-    --cor-footer: rgb(190, 92, 26);
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Folder Antonio</title>
+        <link rel="stylesheet" href="style.css" >
+        <style>
+            body {
+                background-image: url("cidade_noite.webp");
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body class=" espacamentoSupInf espacamentoLateral">
+        <header><!--cabeçalho-->
+            <nav>
+                <div class="flexcabecalho containerCabecado">
+                    <a href="#apresentacao">
+                        <img class="espacamento_cabecalho_imagem icone-menu" src="aprese.webp" alt="Apresentação">
+                     </a>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+                    <a href="#habilidade">
+                        <img class="espacamento_cabecalho_imagem icone-menu" src="HABILIDAE.webp"  alt="Habilidades"> 
+                    </a>
 
-body {
-    padding: 20px; /* Usar padding em vez de margin evita bugs de rolagem */
-    min-height: 100vh;
-}
+                    <a href="#projetos">
+                        <img class="espacamento_cabecalho_imagem icone-menu"  src="projeto.webp"  alt="Projetos">
+                    </a>
 
-html {
-    scroll-behavior: smooth;
-}
+                    <a href="#contato">
+                        <img class="espacamento_cabecalho_imagem icone-menu" src="contato.webp"  alt="Contato"> 
+                    </a>
 
-/* --- ESTILOS DE COR E TEXTO --- */
-.corTexto { color: var(--cor-texto); }
-.corTextoTitulo { color: var(--cor-textoTitulo); }
-.tamanhoTexto { font-size: 2rem; }
-.tamanhoTexto2 { font-size: 1.3rem; }
-
-/* --- CONTAINERS GENERALIZADOS (O Segredo da Centralização) --- */
-.container, section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza tudo na horizontal */
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-/* Classes Flex genéricas para alinhar blocos internos */
-.flex, .flexEstrutura {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Se não couber de lado, quebra para baixo sozinho */
-    width: 100%;
-    max-width: 1000px; /* Limita a largura em monitores muito grandes */
-    margin: 20px auto;
-}
-
-/* --- COMPONENTES --- */
-.bloco {
-    flex: 1 1 300px; /* Cresce e encolhe dinamicamente, base de 300px */
-    max-width: 500px;
-    padding: 20px;
-    background-color: var(--cor-block1);
-    border-radius: 8px; /* Um leve arredondamento deixa mais moderno, mude para 0% se preferir */
-}
-
-.blocoTitulo {
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    background-color: var(--cor-blockTitulo);
-    color: var(--cor-textoTitulo);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-
-/* Cabeçalho / Menu */
-.containerCabecado {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 15px 0;
-}
-
-.espacamento_cabecalho_imagem {
-    width: 120px;
-    height: auto;
-}
-
-/* Imagens */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.icone-menu {
-    cursor: pointer;
-    transition: transform 0.1s;
-}
-
-.icone-menu:hover {
-    transform: scale(1.05);
-}
-
-/* Ajuste específico para os links das redes sociais no Footer */
-#contato {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 400px;
-    margin: 40px auto;
-}
-
-#contato a {
-    display: flex;
-    justify-content: center;
-    width: 50px; /* Define um tamanho fixo para os ícones sociais ficarem organizados */
-}
-
-/* --- MEDIA QUERIES (Adaptação para Celulares) --- */
-@media (max-width: 768px) {
-    /* Em celulares, o que era lado a lado vira uma coluna perfeita */
-    .flex, .flexEstrutura {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .tamanhoTexto { font-size: 1.6rem; }
-    .tamanhoTexto2 { font-size: 1.1rem; }
-}
+                </div>
+                
+            </nav>
+        </header>
+        <main class="container ">
+            <section id="apresentacao">
+                <h1 class="corTextoTitulo blocoTitulo centralizar ">O Último Desenvolvedor de "Interfaces" </h1>
+                <div >
+                    <div class="flex espacamento_apresentacao">
+                        <p class="corTexto tamanhoTexto2 bloco"> Vinte anos atrás, Elias passava doze<br> horas por dia ajustando o padding de<br> botões e depurando loops infinitos em <br>JavaScript. Hoje, o único "bug" com o <br>qual ele se preocupa é o  som de galhos<br> quebrados na floresta morta que cerca seu <br>acampamento.</p>
+                        <p><img class="icone-menu" src="sobrevivente.webp" alt="Foto do Antonio" width="200" height="60"></p>
+                    </div>
+                    <div >
+                        <h3 class="corTextoTitulo blocoTitulo centralizar tamanhoTexto">A Estrutura</h3>
+                        <div class="flexEstrutura espacamento_estrutura_imagem" > 
+                            <img class="icone-menu" src="torre.webp" alt="Torre de vigia" width="200" height="60">
+                            <p class="corTexto tamanhoTexto2 bloco">Para os outros sobreviventes, o acampamento era apenas uma pilha de sucata. Para Elias, era um documento estruturado. Ele organizou a comunidade seguindo uma hierarquia semântica rígida:
+                            <br>header: A torre de vigia, o ponto mais alto e importante para a segurança.
+                            <br>main: A horta comunitária e o poço de água.
+                            <br>footer: A área de descarte e latrinas, devidamente afastada do conteúdo principal.<br>
+                            Ele não usava tijolos; usava lógica. Cada abrigo era construído para ser modular.<br> Se um zumbi invadisse uma seção, aquela "div" era isolada e descartada sem<br> comprometer o resto da estrutura.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="corTextoTitulo blocoTitulo centralizar tamanhoTexto">O Código</h3>
+                        <div class="flex espacamento_codigo" > 
+                            <p class="corTexto tamanhoTexto2 bloco">Enquanto os outros sobreviventes se preocupavam com armas e suprimentos, Elias se concentrava em otimizar o código de sobrevivência. Ele criou rotinas para coletar água da chuva, sistemas de alarme usando latas e cordas, e até um mecanismo de defesa improvisado que lançava pedras nos zumbis. Seu código era eficiente, reutilizável e, mais importante, mantinha a comunidade viva.</p>
+                            <img class="icone-menu" src="codigo.webp" alt="Código de programação" width="200" height="60">
+                        </div>
+                    </div>
+                </div>
+                <div >
+            </section>
+            <section id="habilidade">
+                <div>
+                    <h2 class="centralizar tamanhoTexto corTextoTitulo blocoTitulo">Habilidades</h2>
+                </div >
+                <div class="flex" >
+                    <a href="htmlFundo.webp" target="_blank">
+                        <p><img class="icone-menu " src="htmlFundo.webp" alt="HTML" width="600" height="100"></p>
+                    </a>
+                    <h2 class="espacamento_habilidades_texto corTexto">Habilidade de estruturar e organizar o acampamento de forma lógica e eficiente, <br>garantindo a segurança e a funcionalidade para os sobreviventes.</h2>
+                </div>
+                <div class="flex">
+                    <a href="css (1).webp" target="_blank">
+                        <p><img class="icone-menu " src="css (1).webp" alt="CSS" width="600" height="100"></a>p>
+                    </a>
+                    <h2 class="espacamento_habilidades_texto corTexto">Habilidade de personalizar o acampamento para torná-lo mais confortável e funcional.</h2>
+                </div>
+            </section>
+            <section id="projetos">
+                <div>
+                    <h2  class="espacamentoProjetos corTextoTitulo blocoTitulo">Projetos</h2>
+                </div>
+                <div>
+                    <p class="bloco corTexto">Projeto 1: O Nomadismo de Rede</p>
+                    <p class="bloco corTexto">Projeto 2: Sensores Reativos</p>
+                    <p class="bloco corTexto">Projeto 3: Exploração de Nodes</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="contato" class="espacamentoFooter" >
+                <a href="https://wa.me/5569999525687">
+                    <img class="icone-menu" src="whastdoura.webp" alt="WhatsApp" style="width: 200%;">
+                </a>
+                
+                <a href="https://www.instagram.com/gabrielcalado17_">
+                    <img class="icone-menu" src="instra (1) (1).webp" alt="Instagram" style="width : 200%;">
+                </a>
+                <a href="https://facebook.com/antonio.carvalho.198059?locale=pt_BR">
+                    <img class="icone-menu" src="facebook dourado.webp"alt="Facebook" style="width: 200%;">
+                </a>
+                <a href="https://www.linkedin.com/in/antonio-gabriel-calado-carvalho-330898280">
+                    <img class="icone-menu" src="linkedindourado.webp" alt="LinkedIn" style="width: 200%;">
+                </a>
+            </div>
+    </body>
+</html>
