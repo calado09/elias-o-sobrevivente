@@ -3,111 +3,142 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Folder Antonio</title>
-        <link rel="stylesheet" href="style.css" >
-        <style>
-            body {
-                background-image: url("cidade_noite.webp");
-                background-size: cover;
-            }
-        </style>
+        <title>O Último Desenvolvedor de Interfaces | Elias</title>
+        <meta name="description" content="Elias, o Sobrevivente — um portfólio criativo sobre o último desenvolvedor de interfaces.">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body class=" espacamentoSupInf espacamentoLateral">
+    <body class="espacamentoSupInf espacamentoLateral">
+
+        <!-- Pop-up de transmissão aleatória -->
+        <div class="modal-overlay" id="modal-transmissao">
+            <div class="modal-card">
+                <p class="modal-tag">&lt;transmissao/&gt;</p>
+                <p class="modal-dia" id="modal-dia">Dia ----</p>
+                <p class="modal-mensagem" id="modal-mensagem">Sintonizando sinal...</p>
+                <button class="modal-fechar" id="modal-fechar">Encerrar transmissão</button>
+            </div>
+        </div>
+
         <header><!--cabeçalho-->
             <nav>
-                <div class="flexcabecalho containerCabecado">
-                    <a href="#apresentacao">
+                <div class="containerCabecado">
+                    <a href="#apresentacao" title="Apresentação">
                         <img class="espacamento_cabecalho_imagem icone-menu" src="aprese.webp" alt="Apresentação">
                      </a>
 
-                    <a href="#habilidade">
-                        <img class="espacamento_cabecalho_imagem icone-menu" src="HABILIDAE.webp"  alt="Habilidades"> 
+                    <a href="#habilidade" title="Habilidades">
+                        <img class="espacamento_cabecalho_imagem icone-menu" src="HABILIDAE.webp" alt="Habilidades">
                     </a>
 
-                    <a href="#projetos">
-                        <img class="espacamento_cabecalho_imagem icone-menu"  src="projeto.webp"  alt="Projetos">
+                    <a href="#projetos" title="Projetos">
+                        <img class="espacamento_cabecalho_imagem icone-menu" src="projeto.webp" alt="Projetos">
                     </a>
 
-                    <a href="#contato">
-                        <img class="espacamento_cabecalho_imagem icone-menu" src="contato.webp"  alt="Contato"> 
+                    <a href="#contato" title="Contato">
+                        <img class="espacamento_cabecalho_imagem icone-menu" src="contato.webp" alt="Contato">
                     </a>
-
                 </div>
-                
             </nav>
         </header>
-        <main class="container ">
+
+        <main class="container">
             <section id="apresentacao">
-                <h1 class="corTextoTitulo blocoTitulo centralizar ">O Último Desenvolvedor de "Interfaces" </h1>
-                <div >
-                    <div class="flex espacamento_apresentacao">
-                        <p class="corTexto tamanhoTexto2 bloco"> Vinte anos atrás, Elias passava doze<br> horas por dia ajustando o padding de<br> botões e depurando loops infinitos em <br>JavaScript. Hoje, o único "bug" com o <br>qual ele se preocupa é o  som de galhos<br> quebrados na floresta morta que cerca seu <br>acampamento.</p>
-                        <p><img class="icone-menu" src="sobrevivente.webp" alt="Foto do Antonio" width="200" height="60"></p>
-                    </div>
-                    <div >
-                        <h3 class="corTextoTitulo blocoTitulo centralizar tamanhoTexto">A Estrutura</h3>
-                        <div class="flexEstrutura espacamento_estrutura_imagem" > 
-                            <img class="icone-menu" src="torre.webp" alt="Torre de vigia" width="200" height="60">
-                            <p class="corTexto tamanhoTexto2 bloco">Para os outros sobreviventes, o acampamento era apenas uma pilha de sucata. Para Elias, era um documento estruturado. Ele organizou a comunidade seguindo uma hierarquia semântica rígida:
-                            <br>header: A torre de vigia, o ponto mais alto e importante para a segurança.
-                            <br>main: A horta comunitária e o poço de água.
-                            <br>footer: A área de descarte e latrinas, devidamente afastada do conteúdo principal.<br>
-                            Ele não usava tijolos; usava lógica. Cada abrigo era construído para ser modular.<br> Se um zumbi invadisse uma seção, aquela "div" era isolada e descartada sem<br> comprometer o resto da estrutura.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="corTextoTitulo blocoTitulo centralizar tamanhoTexto">O Código</h3>
-                        <div class="flex espacamento_codigo" > 
-                            <p class="corTexto tamanhoTexto2 bloco">Enquanto os outros sobreviventes se preocupavam com armas e suprimentos, Elias se concentrava em otimizar o código de sobrevivência. Ele criou rotinas para coletar água da chuva, sistemas de alarme usando latas e cordas, e até um mecanismo de defesa improvisado que lançava pedras nos zumbis. Seu código era eficiente, reutilizável e, mais importante, mantinha a comunidade viva.</p>
-                            <img class="icone-menu" src="codigo.webp" alt="Código de programação" width="200" height="60">
+                <h1 class="corTextoTitulo blocoTitulo">O Último Desenvolvedor de "Interfaces"</h1>
+
+                <div class="flex espacamento_apresentacao">
+                    <p class="corTexto tamanhoTexto2 bloco">Vinte anos atrás, Elias passava doze horas por dia ajustando o padding de botões e depurando loops infinitos em JavaScript. Hoje, o único "bug" com o qual ele se preocupa é o som de galhos quebrados na floresta morta que cerca seu acampamento.</p>
+                    <img class="icone-menu foto-elias" src="sobrevivente.webp" alt="Foto do Antonio" width="200" height="200">
+                </div>
+
+                <div class="secao-estrutura">
+                    <h2 class="corTextoTitulo blocoTitulo tamanhoTexto">A Estrutura</h2>
+                    <div class="flexEstrutura espacamento_estrutura_imagem">
+                        <img class="icone-menu" src="torre.webp" alt="Torre de vigia" width="200" height="200">
+                        <div class="bloco estrutura-texto">
+                            <p class="corTexto tamanhoTexto2">Para os outros sobreviventes, o acampamento era apenas uma pilha de sucata. Para Elias, era um documento estruturado. Ele organizou a comunidade seguindo uma hierarquia semântica rígida:</p>
+
+                            <dl class="blueprint">
+                                <div class="blueprint-linha">
+                                    <dt>&lt;header&gt;</dt>
+                                    <dd>a torre de vigia, o ponto mais alto e mais importante para a segurança.</dd>
+                                </div>
+                                <div class="blueprint-linha">
+                                    <dt>&lt;main&gt;</dt>
+                                    <dd>a horta comunitária e o poço de água.</dd>
+                                </div>
+                                <div class="blueprint-linha">
+                                    <dt>&lt;footer&gt;</dt>
+                                    <dd>a área de descarte e latrinas, devidamente afastada do conteúdo principal.</dd>
+                                </div>
+                            </dl>
+
+                            <p class="corTexto tamanhoTexto2">Ele não usava tijolos; usava lógica. Cada abrigo era construído para ser modular. Se um zumbi invadisse uma seção, aquela "div" era isolada e descartada sem comprometer o resto da estrutura.</p>
                         </div>
                     </div>
                 </div>
-                <div >
+
+                <div class="secao-estrutura">
+                    <h2 class="corTextoTitulo blocoTitulo tamanhoTexto">O Código</h2>
+                    <div class="flex espacamento_codigo">
+                        <p class="corTexto tamanhoTexto2 bloco">Enquanto os outros sobreviventes se preocupavam com armas e suprimentos, Elias se concentrava em otimizar o código de sobrevivência. Ele criou rotinas para coletar água da chuva, sistemas de alarme usando latas e cordas, e até um mecanismo de defesa improvisado que lançava pedras nos zumbis. Seu código era eficiente, reutilizável e, mais importante, mantinha a comunidade viva.</p>
+                        <img class="icone-menu" src="codigo.webp" alt="Código de programação" width="200" height="200">
+                    </div>
+                </div>
             </section>
+
             <section id="habilidade">
-                <div>
-                    <h2 class="centralizar tamanhoTexto corTextoTitulo blocoTitulo">Habilidades</h2>
-                </div >
-                <div class="flex" >
-                    <a href="htmlFundo.webp" target="_blank">
-                        <p><img class="icone-menu " src="htmlFundo.webp" alt="HTML" width="600" height="100"></p>
+                <h2 class="tamanhoTexto corTextoTitulo blocoTitulo">Habilidades</h2>
+
+                <div class="flex skill-card">
+                    <a href="htmlFundo.webp" target="_blank" rel="noopener noreferrer">
+                        <img class="icone-menu skill-banner" src="htmlFundo.webp" alt="HTML">
                     </a>
-                    <h2 class="espacamento_habilidades_texto corTexto">Habilidade de estruturar e organizar o acampamento de forma lógica e eficiente, <br>garantindo a segurança e a funcionalidade para os sobreviventes.</h2>
+                    <p class="espacamento_habilidades_texto corTexto tamanhoTexto2">Habilidade de estruturar e organizar o acampamento de forma lógica e eficiente, garantindo a segurança e a funcionalidade para os sobreviventes.</p>
                 </div>
-                <div class="flex">
-                    <a href="css (1).webp" target="_blank">
-                        <p><img class="icone-menu " src="css (1).webp" alt="CSS" width="600" height="100"></a>p>
+
+                <div class="flex skill-card">
+                    <a href="css (1).webp" target="_blank" rel="noopener noreferrer">
+                        <img class="icone-menu skill-banner" src="css (1).webp" alt="CSS">
                     </a>
-                    <h2 class="espacamento_habilidades_texto corTexto">Habilidade de personalizar o acampamento para torná-lo mais confortável e funcional.</h2>
+                    <p class="espacamento_habilidades_texto corTexto tamanhoTexto2">Habilidade de personalizar o acampamento para torná-lo mais confortável e funcional.</p>
                 </div>
             </section>
+
             <section id="projetos">
-                <div>
-                    <h2  class="espacamentoProjetos corTextoTitulo blocoTitulo">Projetos</h2>
-                </div>
-                <div>
-                    <p class="bloco corTexto">Projeto 1: O Nomadismo de Rede</p>
-                    <p class="bloco corTexto">Projeto 2: Sensores Reativos</p>
-                    <p class="bloco corTexto">Projeto 3: Exploração de Nodes</p>
+                <h2 class="espacamentoProjetos corTextoTitulo blocoTitulo tamanhoTexto">Projetos</h2>
+
+                <div class="flex">
+                    <p class="bloco corTexto projeto-item"><span class="projeto-tag">projeto_01</span>O Nomadismo de Rede</p>
+                    <p class="bloco corTexto projeto-item"><span class="projeto-tag">projeto_02</span>Sensores Reativos</p>
+                    <p class="bloco corTexto projeto-item"><span class="projeto-tag">projeto_03</span>Exploração de Nodes</p>
                 </div>
             </section>
         </main>
+
         <footer>
-            <div id="contato" class="espacamentoFooter" >
-                <a href="https://wa.me/5569999525687">
-                    <img class="icone-menu" src="whastdoura.webp" alt="WhatsApp" style="width: 200%;">
+            <p class="footer-tagline corTexto">Sinal aberto — entre em contato</p>
+            <div id="contato" class="espacamentoFooter">
+                <a href="https://wa.me/5569999525687" title="WhatsApp">
+                    <img class="icone-menu" src="whastdoura.webp" alt="WhatsApp">
                 </a>
-                
-                <a href="https://www.instagram.com/gabrielcalado17_">
-                    <img class="icone-menu" src="instra (1) (1).webp" alt="Instagram" style="width : 200%;">
+
+                <a href="https://www.instagram.com/gabrielcalado17_" title="Instagram">
+                    <img class="icone-menu" src="instra (1) (1).webp" alt="Instagram">
                 </a>
-                <a href="https://facebook.com/antonio.carvalho.198059?locale=pt_BR">
-                    <img class="icone-menu" src="facebook dourado.webp"alt="Facebook" style="width: 200%;">
+                <a href="https://facebook.com/antonio.carvalho.198059?locale=pt_BR" title="Facebook">
+                    <img class="icone-menu" src="facebook dourado.webp" alt="Facebook">
                 </a>
-                <a href="https://www.linkedin.com/in/antonio-gabriel-calado-carvalho-330898280">
-                    <img class="icone-menu" src="linkedindourado.webp" alt="LinkedIn" style="width: 200%;">
+                <a href="https://www.linkedin.com/in/antonio-gabriel-calado-carvalho-330898280" title="LinkedIn">
+                    <img class="icone-menu" src="linkedindourado.webp" alt="LinkedIn">
                 </a>
             </div>
+        </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
