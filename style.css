@@ -1,10 +1,18 @@
 :root {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Work Sans', 'Arial', sans-serif;
     --cor-textoTitulo: rgba(212, 230, 52, 0.87);
     --cor-texto: rgb(192, 223, 199);
     --cor-block1: rgb(34, 30, 30);
     --cor-blockTitulo: rgba(124, 129, 113, 0.377);
     --cor-footer: rgb(190, 92, 26);
+    --cor-borda: rgba(212, 230, 52, 0.18);
+
+    --font-titulo: 'Zilla Slab', 'Georgia', serif;
+    --font-corpo: 'Work Sans', 'Arial', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+    --raio: 10px;
+    --sombra: 0 14px 34px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -13,26 +21,42 @@
     box-sizing: border-box;
 }
 
-body {
-    padding: 20px; /* Usar padding em vez de margin evita bugs de rolagem */
-    min-height: 100vh;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    padding: 20px;
+    min-height: 100vh;
+    background:
+        linear-gradient(180deg, rgba(8, 7, 6, 0.78), rgba(8, 7, 6, 0.93)),
+        url("cidade_noite.webp") center / cover fixed no-repeat;
+    color: var(--cor-texto);
+}
+
+.espacamentoSupInf {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.espacamentoLateral {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 /* --- ESTILOS DE COR E TEXTO --- */
 .corTexto { color: var(--cor-texto); }
-.corTextoTitulo { color: var(--cor-textoTitulo); }
+.corTextoTitulo { color: var(--cor-textoTitulo); font-family: var(--font-titulo); }
 .tamanhoTexto { font-size: 2rem; }
-.tamanhoTexto2 { font-size: 1.3rem; }
+.tamanhoTexto2 { font-size: 1.15rem; line-height: 1.7; }
 
-/* --- CONTAINERS GENERALIZADOS (O Segredo da Centralização) --- */
+h1, h2, h3 { font-family: var(--font-titulo); font-weight: 600; }
+
+/* --- CONTAINERS GENERALIZADOS --- */
 .container, section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza tudo na horizontal */
+    align-items: center; 
     justify-content: center;
     width: 100%;
     margin-bottom: 40px;
@@ -56,7 +80,9 @@ html {
     max-width: 500px;
     padding: 20px;
     background-color: var(--cor-block1);
-    border-radius: 8px; /* Um leve arredondamento deixa mais moderno, mude para 0% se preferir */
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio); /* Um leve arredondamento deixa mais moderno, mude para 0% se preferir */
+    box-shadow: var(--sombra);
 }
 
 .blocoTitulo {
@@ -68,26 +94,112 @@ html {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 4px;
+    letter-spacing: 0.02em;
 }
 
 /* Cabeçalho / Menu */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(10, 9, 8, 0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--cor-borda);
+    margin: -20px -5% 40px;
+    padding: 0 5%;
+}
+
 .containerCabecado {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 .espacamento_cabecalho_imagem {
-    width: 120px;
+    width: 56px;
     height: auto;
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0));
 }
+
 /* HABILIDADES */
-.espacamento_habilidades_texto{
+.espacamento_habilidades_texto {
     text-align: center;
     flex-wrap: wrap;
+    max-width: 420px;
 }
+
+.skill-card {
+    background-color: var(--cor-block1);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 30px;
+}
+
+.skill-banner {
+    max-width: 260px;
+    border-radius: 6px;
+}
+
+/* Blueprint (header / main / footer) */
+.blueprint {
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid var(--cor-footer);
+    border-radius: 4px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blueprint-linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+}
+
+.blueprint dt {
+    color: var(--cor-footer);
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.blueprint dd {
+    color: var(--cor-texto);
+    opacity: 0.9;
+}
+
+.estrutura-texto {
+    text-align: left;
+}
+
+.foto-elias {
+    border-radius: 50%;
+    border: 2px solid var(--cor-footer);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Projetos */
+.projeto-item {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.projeto-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--cor-footer);
+}
+
 /* Imagens */
 img {
     max-width: 100%;
@@ -97,27 +209,128 @@ img {
 
 .icone-menu {
     cursor: pointer;
-    transition: transform 0.1s;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .icone-menu:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 8px rgba(212, 230, 52, 0.35));
 }
+
 /* Ajuste específico para os links das redes sociais no Footer */
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
 #contato {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     width: 100%;
     max-width: 400px;
-    margin: 40px auto;
+    margin: 0 auto 20px;
 }
 
 #contato a {
     display: flex;
     justify-content: center;
-    width: 50px; /* Define um tamanho fixo para os ícones sociais ficarem organizados */
+}
+
+#contato img {
+    width: 40px; /* Tamanho fixo e consistente para os ícones sociais */
+    height: 40px;
+}
+
+/* --- POP-UP DE TRANSMISSÃO --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(6, 5, 4, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.modal-overlay.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background-color: var(--cor-block1);
+    border: 1px solid var(--cor-footer);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    max-width: 420px;
+    width: 100%;
+    padding: 28px 26px;
+    text-align: center;
+    transform: translateY(14px);
+    transition: transform 0.35s ease;
+}
+
+.modal-overlay.ativo .modal-card {
+    transform: translateY(0);
+}
+
+.modal-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--cor-footer);
+    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+}
+
+.modal-dia {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--cor-textoTitulo);
+    margin-bottom: 14px;
+}
+
+.modal-mensagem {
+    font-family: var(--font-corpo);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    margin-bottom: 22px;
+}
+
+.modal-fechar {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background-color: var(--cor-footer);
+    color: #100c08;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-fechar:hover {
+    background-color: #d8711f;
+    transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-overlay, .modal-card {
+        transition: none;
+    }
 }
 
 /* --- MEDIA QUERIES (Adaptação para Celulares) --- */
@@ -128,6 +341,18 @@ img {
         text-align: center;
     }
 
+    .estrutura-texto {
+        text-align: center;
+    }
+
+    .blueprint-linha {
+        justify-content: center;
+    }
+
     .tamanhoTexto { font-size: 1.6rem; }
-    .tamanhoTexto2 { font-size: 1.1rem; }
+    .tamanhoTexto2 { font-size: 1.05rem; }
+
+    header {
+        margin: -20px -5% 24px;
+    }
 }
